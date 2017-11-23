@@ -9,4 +9,4 @@ Connect-VIServer -Server oakvc.cibdp.com
 get-vm | Get-Snapshot | select vm, name, created | export-csv c:\users\oman\Documents\snaps.csv
 
 #-- Email Report out --#
-Send-MailMessage -To "Lee.Abner@cibmis.com" -From "admin@cibmis.com" -SMTPServer "exchange.cibdp.com" -Subject "Snapshot Report" -Attachments c:\users\oman\Documents\snaps.csv
+Send-MailMessage -To "Lee.Abner@cibmis.com,Ray.Vanna@cibmis.com" -From "admin@cibmis.com" -SMTPServer "exchange.cibdp.com" -Subject "Snapshot Report" -Attachments c:\users\oman\Documents\snaps.csv
