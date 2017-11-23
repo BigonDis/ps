@@ -9,7 +9,7 @@ Connect-VIServer -Server oakvc.cibdp.com
 get-vm | Get-Snapshot | select vm, name, created | export-csv c:\users\oman\Documents\snaps.csv
 
 #-- Email Report out --#
-[string[]]$toAddress="Lee.abner@cibmis.com", "Ray. Vanna@cibmis.com"
+[string[]]$toAddress="Lee.abner@cibmis.com", "Ray.Vanna@cibmis.com"
 Send-MailMessage -To $toAddress -From "admin@cibmis.com" -SMTPServer "exchange.cibdp.com" -Subject "Snapshot Report" -Attachments c:\users\oman\Documents\snaps.csv
 
 Disconnect-VIServer * -Confirm:$False
